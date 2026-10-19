@@ -1,0 +1,2439 @@
+{
+  "run_id": "fac70cb0-fddc-4fe2-823b-58fe61d23c0e",
+  "version": "v1",
+  "split": "dev",
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-10-19T10:43:14.902349+00:00",
+  "finished_at": "2026-10-19T10:44:40.139894+00:00",
+  "file_hashes": {
+    "data\\test_mini_answers.csv": "365b43268bef9027de3e8cfd7b655b872fd331e17ed29bf62976c7c28f9b6a6e",
+    "data\\dev_gold.csv": "afe84cc78f304afb6a4aaa505dd7504af80fcbf8bc507806aa5ff0aab6bf4850"
+  },
+  "metrics_summary": "G=376  P=12  M=12  C=12\nExtraction F1 : 0.0619\nJoint F1      : 0.0619\nMacro F1      : 0.0612\n\nPer-label F1:\n  supported       P=1.000  R=0.017  F1=0.033  (TP=2 FP=0 FN=118)\n  contradicted    P=1.000  R=0.042  F1=0.080  (TP=5 FP=0 FN=115)\n  unknown         P=1.000  R=0.037  F1=0.071  (TP=5 FP=0 FN=131)\n\nConfusion matrix (rows=gold, cols=pred):\n                               supported          contradicted               unknown      missing_or_error\nsupported                              2                     0                     0                   118\ncontradicted                           0                     5                     0                   115\nunknown                                0                     0                     5                   131\nno_gold                                0                     0                     0                     0",
+  "metrics": {
+    "G": 376,
+    "P": 12,
+    "M": 12,
+    "C": 12,
+    "extraction_f1": 0.061855670103092786,
+    "joint_f1": 0.061855670103092786,
+    "macro_f1": 0.06123629035383482,
+    "per_label": {
+      "supported": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 118,
+        "precision": 1.0,
+        "recall": 0.016666666666666666,
+        "f1": 0.03278688524590164
+      },
+      "contradicted": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 115,
+        "precision": 1.0,
+        "recall": 0.041666666666666664,
+        "f1": 0.07999999999999999
+      },
+      "unknown": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 131,
+        "precision": 1.0,
+        "recall": 0.03676470588235294,
+        "f1": 0.07092198581560283
+      }
+    },
+    "confusion": {
+      "supported": {
+        "supported": 2,
+        "contradicted": 0,
+        "unknown": 0,
+        "missing_or_error": 118
+      },
+      "contradicted": {
+        "supported": 0,
+        "contradicted": 5,
+        "unknown": 0,
+        "missing_or_error": 115
+      },
+      "unknown": {
+        "supported": 0,
+        "contradicted": 0,
+        "unknown": 5,
+        "missing_or_error": 131
+      },
+      "no_gold": {
+        "supported": 0,
+        "contradicted": 0,
+        "unknown": 0,
+        "missing_or_error": 0
+      }
+    },
+    "missed": [
+      {
+        "answer_id": "A01",
+        "start": 306,
+        "end": 460,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A01",
+        "start": 1943,
+        "end": 2104,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A02",
+        "start": 306,
+        "end": 506,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A02",
+        "start": 1085,
+        "end": 1272,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A02",
+        "start": 1469,
+        "end": 1659,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A02",
+        "start": 1660,
+        "end": 1813,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A02",
+        "start": 2040,
+        "end": 2223,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A03",
+        "start": 335,
+        "end": 505,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A03",
+        "start": 506,
+        "end": 687,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A03",
+        "start": 689,
+        "end": 861,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A03",
+        "start": 862,
+        "end": 1043,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A03",
+        "start": 1240,
+        "end": 1409,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A03",
+        "start": 1410,
+        "end": 1563,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A03",
+        "start": 1564,
+        "end": 1742,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A03",
+        "start": 1744,
+        "end": 1917,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A03",
+        "start": 1918,
+        "end": 2069,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A04",
+        "start": 324,
+        "end": 493,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A04",
+        "start": 494,
+        "end": 694,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A04",
+        "start": 696,
+        "end": 899,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A04",
+        "start": 900,
+        "end": 1097,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A04",
+        "start": 1098,
+        "end": 1267,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A04",
+        "start": 1464,
+        "end": 1636,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A04",
+        "start": 1637,
+        "end": 1798,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A04",
+        "start": 1800,
+        "end": 1983,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A04",
+        "start": 1984,
+        "end": 2165,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A04",
+        "start": 2166,
+        "end": 2361,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A04",
+        "start": 2363,
+        "end": 2540,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A05",
+        "start": 371,
+        "end": 531,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A05",
+        "start": 532,
+        "end": 697,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A05",
+        "start": 699,
+        "end": 890,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A05",
+        "start": 891,
+        "end": 1095,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A05",
+        "start": 1292,
+        "end": 1467,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A05",
+        "start": 1468,
+        "end": 1651,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A05",
+        "start": 1652,
+        "end": 1828,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A05",
+        "start": 1830,
+        "end": 1980,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A06",
+        "start": 306,
+        "end": 494,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A06",
+        "start": 495,
+        "end": 697,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A06",
+        "start": 699,
+        "end": 897,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A06",
+        "start": 898,
+        "end": 1081,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A06",
+        "start": 1082,
+        "end": 1235,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A06",
+        "start": 1432,
+        "end": 1621,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A06",
+        "start": 1622,
+        "end": 1801,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A06",
+        "start": 1803,
+        "end": 1957,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A06",
+        "start": 1958,
+        "end": 2132,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A06",
+        "start": 2133,
+        "end": 2356,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A07",
+        "start": 306,
+        "end": 511,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A07",
+        "start": 512,
+        "end": 698,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A07",
+        "start": 700,
+        "end": 884,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A07",
+        "start": 987,
+        "end": 1153,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A07",
+        "start": 1350,
+        "end": 1533,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A07",
+        "start": 1534,
+        "end": 1719,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A07",
+        "start": 1721,
+        "end": 1919,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A07",
+        "start": 1920,
+        "end": 2143,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A08",
+        "start": 335,
+        "end": 525,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A08",
+        "start": 526,
+        "end": 685,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A08",
+        "start": 687,
+        "end": 889,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A08",
+        "start": 890,
+        "end": 1083,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A08",
+        "start": 1084,
+        "end": 1282,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A08",
+        "start": 1479,
+        "end": 1676,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A08",
+        "start": 1677,
+        "end": 1855,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A08",
+        "start": 1857,
+        "end": 2036,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A08",
+        "start": 2037,
+        "end": 2200,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A08",
+        "start": 2201,
+        "end": 2395,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A09",
+        "start": 324,
+        "end": 491,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A09",
+        "start": 492,
+        "end": 655,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A09",
+        "start": 657,
+        "end": 844,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A09",
+        "start": 845,
+        "end": 1048,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A09",
+        "start": 1245,
+        "end": 1430,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A09",
+        "start": 1431,
+        "end": 1614,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A09",
+        "start": 1615,
+        "end": 1781,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A09",
+        "start": 1783,
+        "end": 1963,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A09",
+        "start": 1964,
+        "end": 2148,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A10",
+        "start": 371,
+        "end": 563,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A10",
+        "start": 564,
+        "end": 733,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A10",
+        "start": 735,
+        "end": 923,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A10",
+        "start": 924,
+        "end": 1087,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A10",
+        "start": 1088,
+        "end": 1265,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A10",
+        "start": 1462,
+        "end": 1643,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A10",
+        "start": 1644,
+        "end": 1821,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A10",
+        "start": 1823,
+        "end": 2004,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A10",
+        "start": 2005,
+        "end": 2200,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A10",
+        "start": 2201,
+        "end": 2372,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A11",
+        "start": 306,
+        "end": 483,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A11",
+        "start": 484,
+        "end": 653,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A11",
+        "start": 655,
+        "end": 855,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A11",
+        "start": 856,
+        "end": 1026,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A11",
+        "start": 1027,
+        "end": 1172,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A11",
+        "start": 1369,
+        "end": 1532,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A11",
+        "start": 1533,
+        "end": 1697,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A11",
+        "start": 1699,
+        "end": 1895,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A11",
+        "start": 1896,
+        "end": 2091,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A11",
+        "start": 2092,
+        "end": 2264,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A12",
+        "start": 335,
+        "end": 515,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A12",
+        "start": 516,
+        "end": 674,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A12",
+        "start": 676,
+        "end": 871,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A12",
+        "start": 872,
+        "end": 1032,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A12",
+        "start": 1229,
+        "end": 1378,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A12",
+        "start": 1379,
+        "end": 1559,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A12",
+        "start": 1560,
+        "end": 1741,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A12",
+        "start": 1743,
+        "end": 1916,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A12",
+        "start": 1917,
+        "end": 2113,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A13",
+        "start": 324,
+        "end": 510,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A13",
+        "start": 511,
+        "end": 680,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A13",
+        "start": 682,
+        "end": 902,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A13",
+        "start": 903,
+        "end": 1067,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A13",
+        "start": 1068,
+        "end": 1270,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A13",
+        "start": 1467,
+        "end": 1623,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A13",
+        "start": 1624,
+        "end": 1804,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A13",
+        "start": 1806,
+        "end": 1950,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A13",
+        "start": 1951,
+        "end": 2126,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A13",
+        "start": 2127,
+        "end": 2307,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A14",
+        "start": 371,
+        "end": 557,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A14",
+        "start": 558,
+        "end": 756,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A14",
+        "start": 758,
+        "end": 943,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A14",
+        "start": 944,
+        "end": 1127,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A14",
+        "start": 1324,
+        "end": 1471,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A14",
+        "start": 1472,
+        "end": 1662,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A14",
+        "start": 1663,
+        "end": 1837,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A14",
+        "start": 1839,
+        "end": 2018,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A14",
+        "start": 2019,
+        "end": 2198,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A15",
+        "start": 306,
+        "end": 495,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A15",
+        "start": 496,
+        "end": 698,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A15",
+        "start": 700,
+        "end": 889,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A15",
+        "start": 890,
+        "end": 1074,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A15",
+        "start": 1075,
+        "end": 1236,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A15",
+        "start": 1433,
+        "end": 1627,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A15",
+        "start": 1628,
+        "end": 1825,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A15",
+        "start": 1827,
+        "end": 2026,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A15",
+        "start": 2027,
+        "end": 2174,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A15",
+        "start": 2175,
+        "end": 2354,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A16",
+        "start": 306,
+        "end": 454,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A16",
+        "start": 455,
+        "end": 618,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A16",
+        "start": 620,
+        "end": 828,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A16",
+        "start": 829,
+        "end": 1001,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A16",
+        "start": 1198,
+        "end": 1422,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A16",
+        "start": 1423,
+        "end": 1613,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A16",
+        "start": 1614,
+        "end": 1797,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A16",
+        "start": 1799,
+        "end": 1976,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A16",
+        "start": 1977,
+        "end": 2138,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A17",
+        "start": 335,
+        "end": 506,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A17",
+        "start": 507,
+        "end": 694,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A17",
+        "start": 696,
+        "end": 879,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A17",
+        "start": 880,
+        "end": 1054,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A17",
+        "start": 1055,
+        "end": 1247,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A17",
+        "start": 1444,
+        "end": 1607,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A17",
+        "start": 1608,
+        "end": 1785,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A17",
+        "start": 1787,
+        "end": 1932,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A17",
+        "start": 1933,
+        "end": 2114,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A17",
+        "start": 2115,
+        "end": 2336,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A17",
+        "start": 2338,
+        "end": 2519,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A18",
+        "start": 324,
+        "end": 490,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A18",
+        "start": 491,
+        "end": 661,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A18",
+        "start": 663,
+        "end": 840,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A18",
+        "start": 943,
+        "end": 1138,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A18",
+        "start": 1335,
+        "end": 1518,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A18",
+        "start": 1519,
+        "end": 1691,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A18",
+        "start": 1693,
+        "end": 1874,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A18",
+        "start": 1875,
+        "end": 2044,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A19",
+        "start": 371,
+        "end": 555,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A19",
+        "start": 556,
+        "end": 729,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A19",
+        "start": 731,
+        "end": 902,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A19",
+        "start": 903,
+        "end": 1067,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A19",
+        "start": 1068,
+        "end": 1268,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A19",
+        "start": 1465,
+        "end": 1654,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A19",
+        "start": 1655,
+        "end": 1832,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A19",
+        "start": 1834,
+        "end": 2008,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A19",
+        "start": 2009,
+        "end": 2201,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A19",
+        "start": 2202,
+        "end": 2372,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A20",
+        "start": 306,
+        "end": 485,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A20",
+        "start": 486,
+        "end": 662,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A20",
+        "start": 664,
+        "end": 855,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A20",
+        "start": 856,
+        "end": 1046,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A20",
+        "start": 1243,
+        "end": 1434,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A20",
+        "start": 1435,
+        "end": 1607,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A20",
+        "start": 1608,
+        "end": 1752,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A20",
+        "start": 1754,
+        "end": 1949,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A21",
+        "start": 335,
+        "end": 558,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A21",
+        "start": 559,
+        "end": 722,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A21",
+        "start": 724,
+        "end": 892,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A21",
+        "start": 893,
+        "end": 1087,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A21",
+        "start": 1284,
+        "end": 1478,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A21",
+        "start": 1479,
+        "end": 1676,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A21",
+        "start": 1677,
+        "end": 1848,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A21",
+        "start": 1850,
+        "end": 2028,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A22",
+        "start": 324,
+        "end": 503,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A22",
+        "start": 504,
+        "end": 666,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A22",
+        "start": 668,
+        "end": 843,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A22",
+        "start": 844,
+        "end": 1033,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A22",
+        "start": 1034,
+        "end": 1201,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A22",
+        "start": 1398,
+        "end": 1552,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A22",
+        "start": 1553,
+        "end": 1704,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A22",
+        "start": 1706,
+        "end": 1892,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A22",
+        "start": 1893,
+        "end": 2087,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A22",
+        "start": 2088,
+        "end": 2271,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A23",
+        "start": 371,
+        "end": 548,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A23",
+        "start": 549,
+        "end": 744,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A23",
+        "start": 746,
+        "end": 907,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A23",
+        "start": 908,
+        "end": 1098,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A23",
+        "start": 1295,
+        "end": 1477,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A23",
+        "start": 1478,
+        "end": 1662,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A23",
+        "start": 1663,
+        "end": 1854,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A23",
+        "start": 1856,
+        "end": 2056,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A24",
+        "start": 306,
+        "end": 498,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A24",
+        "start": 499,
+        "end": 683,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A24",
+        "start": 685,
+        "end": 890,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A24",
+        "start": 891,
+        "end": 1091,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A24",
+        "start": 1092,
+        "end": 1287,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A24",
+        "start": 1484,
+        "end": 1675,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A24",
+        "start": 1676,
+        "end": 1854,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A24",
+        "start": 1856,
+        "end": 2025,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A24",
+        "start": 2026,
+        "end": 2214,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A24",
+        "start": 2215,
+        "end": 2381,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A25",
+        "start": 306,
+        "end": 459,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A25",
+        "start": 460,
+        "end": 630,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A25",
+        "start": 632,
+        "end": 824,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A25",
+        "start": 825,
+        "end": 988,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A25",
+        "start": 1185,
+        "end": 1366,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A25",
+        "start": 1367,
+        "end": 1526,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A25",
+        "start": 1527,
+        "end": 1672,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A25",
+        "start": 1674,
+        "end": 1851,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A25",
+        "start": 1852,
+        "end": 2023,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A26",
+        "start": 335,
+        "end": 556,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A26",
+        "start": 557,
+        "end": 727,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A26",
+        "start": 729,
+        "end": 925,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A26",
+        "start": 926,
+        "end": 1107,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A26",
+        "start": 1108,
+        "end": 1265,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A26",
+        "start": 1462,
+        "end": 1650,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A26",
+        "start": 1651,
+        "end": 1796,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A26",
+        "start": 1798,
+        "end": 1975,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A26",
+        "start": 1976,
+        "end": 2153,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A26",
+        "start": 2154,
+        "end": 2351,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A27",
+        "start": 324,
+        "end": 493,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A27",
+        "start": 494,
+        "end": 688,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A27",
+        "start": 690,
+        "end": 873,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A27",
+        "start": 874,
+        "end": 1033,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A27",
+        "start": 1230,
+        "end": 1392,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A27",
+        "start": 1393,
+        "end": 1579,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A27",
+        "start": 1580,
+        "end": 1745,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A27",
+        "start": 1747,
+        "end": 1938,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A27",
+        "start": 1939,
+        "end": 2088,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A28",
+        "start": 371,
+        "end": 548,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A28",
+        "start": 549,
+        "end": 751,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A28",
+        "start": 753,
+        "end": 942,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A28",
+        "start": 943,
+        "end": 1122,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A28",
+        "start": 1123,
+        "end": 1302,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A28",
+        "start": 1499,
+        "end": 1671,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A28",
+        "start": 1672,
+        "end": 1819,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A28",
+        "start": 1821,
+        "end": 2006,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A28",
+        "start": 2007,
+        "end": 2180,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A28",
+        "start": 2181,
+        "end": 2355,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A29",
+        "start": 306,
+        "end": 453,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A29",
+        "start": 454,
+        "end": 615,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A29",
+        "start": 617,
+        "end": 788,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A29",
+        "start": 789,
+        "end": 975,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A29",
+        "start": 1172,
+        "end": 1369,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A29",
+        "start": 1370,
+        "end": 1549,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A29",
+        "start": 1550,
+        "end": 1701,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A29",
+        "start": 1703,
+        "end": 1882,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A29",
+        "start": 1883,
+        "end": 2066,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A30",
+        "start": 306,
+        "end": 509,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A30",
+        "start": 510,
+        "end": 676,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A30",
+        "start": 678,
+        "end": 860,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A30",
+        "start": 861,
+        "end": 1061,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A30",
+        "start": 1062,
+        "end": 1242,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A30",
+        "start": 1439,
+        "end": 1663,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A30",
+        "start": 1664,
+        "end": 1844,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A30",
+        "start": 1846,
+        "end": 2030,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A30",
+        "start": 2031,
+        "end": 2229,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A30",
+        "start": 2230,
+        "end": 2417,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A30",
+        "start": 2419,
+        "end": 2572,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A31",
+        "start": 324,
+        "end": 477,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A31",
+        "start": 478,
+        "end": 653,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A31",
+        "start": 655,
+        "end": 854,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A31",
+        "start": 855,
+        "end": 1050,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A31",
+        "start": 1051,
+        "end": 1238,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A31",
+        "start": 1435,
+        "end": 1615,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A31",
+        "start": 1616,
+        "end": 1793,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A31",
+        "start": 1795,
+        "end": 1963,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A31",
+        "start": 1964,
+        "end": 2155,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A31",
+        "start": 2156,
+        "end": 2351,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A32",
+        "start": 371,
+        "end": 576,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A32",
+        "start": 577,
+        "end": 749,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A32",
+        "start": 751,
+        "end": 928,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A32",
+        "start": 1031,
+        "end": 1205,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A32",
+        "start": 1402,
+        "end": 1583,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A32",
+        "start": 1584,
+        "end": 1771,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A32",
+        "start": 1773,
+        "end": 1960,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A32",
+        "start": 1961,
+        "end": 2134,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A32",
+        "start": 2135,
+        "end": 2319,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A33",
+        "start": 306,
+        "end": 498,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A33",
+        "start": 499,
+        "end": 656,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A33",
+        "start": 658,
+        "end": 842,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A33",
+        "start": 843,
+        "end": 1027,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A33",
+        "start": 1028,
+        "end": 1203,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A33",
+        "start": 1400,
+        "end": 1574,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A33",
+        "start": 1575,
+        "end": 1780,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A33",
+        "start": 1782,
+        "end": 1951,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A33",
+        "start": 1952,
+        "end": 2111,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A33",
+        "start": 2112,
+        "end": 2307,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A33",
+        "start": 2309,
+        "end": 2509,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A34",
+        "start": 306,
+        "end": 479,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A34",
+        "start": 480,
+        "end": 656,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A34",
+        "start": 658,
+        "end": 808,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A34",
+        "start": 809,
+        "end": 958,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A34",
+        "start": 1155,
+        "end": 1315,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A34",
+        "start": 1316,
+        "end": 1496,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A34",
+        "start": 1497,
+        "end": 1683,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A34",
+        "start": 1685,
+        "end": 1854,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A35",
+        "start": 335,
+        "end": 520,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A35",
+        "start": 521,
+        "end": 687,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A35",
+        "start": 689,
+        "end": 883,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A35",
+        "start": 884,
+        "end": 1070,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A35",
+        "start": 1071,
+        "end": 1245,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A35",
+        "start": 1442,
+        "end": 1606,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A35",
+        "start": 1607,
+        "end": 1804,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A35",
+        "start": 1806,
+        "end": 1969,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A35",
+        "start": 1970,
+        "end": 2129,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A35",
+        "start": 2130,
+        "end": 2321,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A36",
+        "start": 324,
+        "end": 496,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A36",
+        "start": 497,
+        "end": 687,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A36",
+        "start": 689,
+        "end": 891,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A36",
+        "start": 892,
+        "end": 1059,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A36",
+        "start": 1256,
+        "end": 1463,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A36",
+        "start": 1464,
+        "end": 1650,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A36",
+        "start": 1651,
+        "end": 1822,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A36",
+        "start": 1824,
+        "end": 1978,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A37",
+        "start": 371,
+        "end": 556,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A37",
+        "start": 557,
+        "end": 736,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A37",
+        "start": 738,
+        "end": 917,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A37",
+        "start": 918,
+        "end": 1096,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A37",
+        "start": 1097,
+        "end": 1275,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A37",
+        "start": 1472,
+        "end": 1658,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A37",
+        "start": 1659,
+        "end": 1853,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A37",
+        "start": 1855,
+        "end": 2009,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A37",
+        "start": 2010,
+        "end": 2217,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A37",
+        "start": 2218,
+        "end": 2407,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A38",
+        "start": 306,
+        "end": 486,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A38",
+        "start": 487,
+        "end": 662,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A38",
+        "start": 664,
+        "end": 843,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A38",
+        "start": 844,
+        "end": 1011,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A38",
+        "start": 1208,
+        "end": 1388,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A38",
+        "start": 1389,
+        "end": 1592,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A38",
+        "start": 1593,
+        "end": 1792,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A38",
+        "start": 1794,
+        "end": 1977,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A38",
+        "start": 1978,
+        "end": 2164,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A39",
+        "start": 306,
+        "end": 493,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A39",
+        "start": 494,
+        "end": 691,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A39",
+        "start": 693,
+        "end": 869,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A39",
+        "start": 870,
+        "end": 1062,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A39",
+        "start": 1063,
+        "end": 1245,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A39",
+        "start": 1442,
+        "end": 1614,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A39",
+        "start": 1615,
+        "end": 1792,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A39",
+        "start": 1794,
+        "end": 1971,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A39",
+        "start": 1972,
+        "end": 2172,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A39",
+        "start": 2173,
+        "end": 2360,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A40",
+        "start": 335,
+        "end": 512,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A40",
+        "start": 513,
+        "end": 677,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A40",
+        "start": 679,
+        "end": 871,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A40",
+        "start": 872,
+        "end": 1041,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A40",
+        "start": 1238,
+        "end": 1422,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A40",
+        "start": 1423,
+        "end": 1572,
+        "label": "supported"
+      },
+      {
+        "answer_id": "A40",
+        "start": 1573,
+        "end": 1776,
+        "label": "unknown"
+      },
+      {
+        "answer_id": "A40",
+        "start": 1778,
+        "end": 1947,
+        "label": "contradicted"
+      },
+      {
+        "answer_id": "A40",
+        "start": 1948,
+        "end": 2134,
+        "label": "contradicted"
+      }
+    ],
+    "extra": [],
+    "wrong_label": []
+  },
+  "answer_results": [
+    {
+      "answer_id": "A01",
+      "brand_id": "cleartrail",
+      "status": "partial",
+      "error_message": "",
+      "latency_ms": 7547.00000000048,
+      "turns_used": 2,
+      "claims": [
+        {
+          "answer_id": "A01",
+          "start_char": 461,
+          "end_char": 647,
+          "quote": "For an authorized India purchase with the original invoice and a manufacturing defect, ClearTrail Mini receives a standard manufacturer warranty lasting 18 months from the purchase date.",
+          "label": "contradicted",
+          "fact_ids": [
+            "cleartrail.mini.warranty_india"
+          ],
+          "reason": "The fact states the warranty period is 12 months, not 18 months, so the claim conflicts with the known warranty duration."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 649,
+          "end_char": 832,
+          "quote": "An opened ClearTrail Mini can be returned to any authorized India seller within thirty days for a full refund, even when the speaker has no manufacturing defect or functional problem.",
+          "label": "unknown",
+          "fact_ids": [],
+          "reason": "No return\u2011policy facts are available for ClearTrail Mini, so the claim cannot be verified."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 833,
+          "end_char": 1040,
+          "quote": "The sustained amplifier output of ClearTrail Mini is forty watts per channel during ordinary playback, which allows a direct loudness comparison with other speakers advertised using electrical power figures.",
+          "label": "unknown",
+          "fact_ids": [],
+          "reason": "There are no facts about the amplifier output power for ClearTrail Mini, leaving the claim unverified."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 1237,
+          "end_char": 1439,
+          "quote": "An authorized India service centre guarantees repair of ClearTrail Mini within two working days after receiving the unit and the required purchase paperwork, regardless of replacement-part availability.",
+          "label": "unknown",
+          "fact_ids": [],
+          "reason": "Repair\u2011turnaround time is not covered by any provided facts, so the claim's accuracy cannot be determined."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 1440,
+          "end_char": 1619,
+          "quote": "The stated laboratory playback time for ClearTrail Mini, using a new battery with EQ off at one hundred percent volume, remains 12 hours without any reduction for louder playback.",
+          "label": "contradicted",
+          "fact_ids": [
+            "cleartrail.mini.battery_100_percent"
+          ],
+          "reason": "The fact lists 6 hours of playback at 100% volume, not 12 hours, so the claim contradicts the recorded battery performance."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 1620,
+          "end_char": 1767,
+          "quote": "For an India purchase at the official catalogue list price on 1 October 2026, ClearTrail Mini costs INR 1,299 including tax but excluding shipping.",
+          "label": "supported",
+          "fact_ids": [
+            "cleartrail.mini.price_2026"
+          ],
+          "reason": "The price fact for 2026 specifies INR 1299 tax\u2011included and shipping\u2011excluded, matching the claim."
+        },
+        {
+          "answer_id": "A01",
+          "start_char": 1769,
+          "end_char": 1942,
+          "quote": "The official India retail box for ClearTrail Mini includes a wall charging adapter, even though separate accessory lists may make the charging arrangement look less obvious.",
+          "label": "contradicted",
+          "fact_ids": [
+            "cleartrail.mini.adapter_included"
+          ],
+          "reason": "The adapter_included fact is false, indicating the box does not contain a wall adapter, contradicting the statement."
+        }
+      ],
+      "validation_errors": [
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 0: quote not found verbatim: 'For the current India catalogue, ClearTrail Mini is listed a'"
+        },
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 8: quote not found verbatim: 'The built-in Wi\u2011Fi capability of ClearTrail Mini is absent, '"
+        }
+      ]
+    },
+    {
+      "answer_id": "A02",
+      "brand_id": "cloudnote",
+      "status": "partial",
+      "error_message": "",
+      "latency_ms": 76686.9999999999,
+      "turns_used": 2,
+      "claims": [
+        {
+          "answer_id": "A02",
+          "start_char": 507,
+          "end_char": 689,
+          "quote": "The official India retail box for CloudNote Studio does not include a wall charging adapter, even though separate accessory lists may make the charging arrangement look less obvious.",
+          "label": "contradicted",
+          "fact_ids": [
+            "cloudnote.studio.adapter_included"
+          ],
+          "reason": "The fact cloudnote.studio.adapter_included is true, meaning the box does include an adapter, contradicting the claim that it does not."
+        },
+        {
+          "answer_id": "A02",
+          "start_char": 691,
+          "end_char": 875,
+          "quote": "An opened CloudNote Studio can be returned to any authorized India seller within thirty days for a full refund, even when the speaker has no manufacturing defect or functional problem.",
+          "label": "unknown",
+          "fact_ids": [],
+          "reason": "No available fact covers the return period or refund policy, so the claim cannot be verified."
+        },
+        {
+          "answer_id": "A02",
+          "start_char": 876,
+          "end_char": 1084,
+          "quote": "The sustained amplifier output of CloudNote Studio is forty watts per channel during ordinary playback, which allows a direct loudness comparison with other speakers advertised using electrical power figures.",
+          "label": "unknown",
+          "fact_ids": [],
+          "reason": "There is no fact about the amplifier output power, so the claim cannot be confirmed or contradicted."
+        },
+        {
+          "answer_id": "A02",
+          "start_char": 1815,
+          "end_char": 2039,
+          "quote": "Water damage to CloudNote Studio is included in the standard India manufacturer warranty after an authorized purchase, because water resistance should be understood as warranty coverage rather than just a product capability.",
+          "label": "contradicted",
+          "fact_ids": [
+            "cloudnote.studio.water_damage_covered"
+          ],
+          "reason": "The fact states water_damage_covered is false, meaning water damage is not covered, contradicting the claim that it is included."
+        },
+        {
+          "answer_id": "A02",
+          "start_char": 2224,
+          "end_char": 2372,
+          "quote": "For an India purchase at the official catalogue list price on 1 October 2026, CloudNote Studio costs INR 2,999 including tax but excluding shipping.",
+          "label": "supported",
+          "fact_ids": [
+            "cloudnote.studio.price_2026"
+          ],
+          "reason": "The fact cloudnote.studio.price_2026 records the price as INR\u202f2999 with tax included and shipping excluded, matching the claim."
+        }
+      ],
+      "validation_errors": [
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 0: quote not found verbatim: 'Whatever conclusions a buyer draws from the water\u2011resistance'"
+        },
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 4: quote not found verbatim: 'CloudNote Studio supports the AAC Bluetooth audio codec on c'"
+        },
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 5: quote not found verbatim: 'In winter weather below freezing, CloudNote Studio delivers '"
+        },
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 6: quote not found verbatim: 'For the current India catalogue, CloudNote Studio is listed '"
+        },
+        {
+          "code": "quote_not_found",
+          "detail": "Claim 8: quote not found verbatim: 'The manufacturer supports a stereo pair made from one CloudN'"
+        }
+      ]
+    }
+  ]
+}
